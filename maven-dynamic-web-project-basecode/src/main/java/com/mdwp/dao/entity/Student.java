@@ -14,12 +14,15 @@ public class Student {
 	private int roll_no;
 	private String name;
 	private String course;
+	private int age;
 	
-	public Student(int roll_no, String name, String course) {
+	
+	public Student(int roll_no, String name, String course, int age) {
 		super();
 		this.roll_no = roll_no;
 		this.name = name;
 		this.course = course;
+		this.age = age;
 	}
 	public int getRoll_no() {
 		return roll_no;
@@ -39,4 +42,11 @@ public class Student {
 	public void setCourse(String course) {
 		this.course = course;
 	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
 }

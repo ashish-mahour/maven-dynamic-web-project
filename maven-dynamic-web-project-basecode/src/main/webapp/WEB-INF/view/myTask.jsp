@@ -143,7 +143,7 @@
 
 				<p>
 					By creating an account you agree to our <a href="#"
-						style="color: dodgerblue">Terms & Privacy</a>.
+						style="color: dodgerblue">Terms &amp; Privacy</a>.
 				</p>
 
 				<div class="clearfix">

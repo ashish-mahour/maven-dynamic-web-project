@@ -12,19 +12,20 @@ import com.mdwp.dao.entity.Student;
 
 @Controller
 public class SpringController {
-	
+
 	@Autowired
 	StudentDAO dao;
-	
-	@RequestMapping("/")
-	public String getIndexPage() {
+
+	@RequestMapping(value = "/")
+	public String getIndexPage(HttpServletRequest request) {
+		request.setAttribute("status", "");
 		return new String("index");
 	}
-	
-	@RequestMapping(value="/insertData",method=RequestMethod.POST)
+
+	@RequestMapping(value = "/storeData", method = RequestMethod.POST)
 	public String insertData(HttpServletRequest request) {
-		Student student = new Student(0, request.getParameter("name"), request.getParameter("course"));
-		System.out.println(request.getParameter("name")+"\t"+request.getParameter("course"));
+		Student student = new Student(0, request.getParameter("name"), request.getParameter("course"),22);
+		request.setAttribute("status", "Data Inserted");
 		dao.insertRow(student);
 		return "index";
 	}

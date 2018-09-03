@@ -2,6 +2,7 @@ package com.mdwp.initializer;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.mdwp.config.HibernateConfig;
 import com.mdwp.config.SpringWebConfig;
 
 public class SpringInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -13,7 +14,7 @@ public class SpringInitializer extends AbstractAnnotationConfigDispatcherServlet
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { SpringWebConfig.class };
+		return new Class[] { SpringWebConfig.class, HibernateConfig.class };
 	}
 
 	@Override

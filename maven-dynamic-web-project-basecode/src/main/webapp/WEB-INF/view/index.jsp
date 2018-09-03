@@ -7,10 +7,11 @@
 <title>Hibernate Test</title>
 </head>
 <body>
-<form method="post" action="/insertData">
+<form method="post" action="/storeData" id="form1">
 <input type="text" name="name" placeholder="Enter name here"><br>
 <input type="text" name="course" placeholder="Enter course here"><br>
 <input type="submit" value="Insert">
 </form>
+<p><%=request.getAttribute("status") %></p>
 </body>
 </html>
