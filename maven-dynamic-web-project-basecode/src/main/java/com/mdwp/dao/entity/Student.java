@@ -16,7 +16,9 @@ public class Student {
 	private String course;
 	private int age;
 	
-	
+	public Student() {
+		super();
+	}
 	public Student(int roll_no, String name, String course, int age) {
 		super();
 		this.roll_no = roll_no;

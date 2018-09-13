@@ -67,17 +67,18 @@
 		var a = document.getElementById('status');
 		var profile = googleUser.getBasicProfile();
 		a.innerHTML = "";
-		a.innerHTML += '<br>ID: ' + profile.getId()+ '<br>Name: ' + profile.getName();
+		a.innerHTML += '<br>ID: ' + profile.getId() + '<br>Name: '
+				+ profile.getName();
 		a.innerHTML += '<br>\nImage URL: ' + profile.getImageUrl();
 		a.innerHTML += '<br>\nEmail: ' + profile.getEmail(); // This is null if the 'email' scope is not present.
 	}
-	  function signOut() {
-	    var auth2 = gapi.auth2.getAuthInstance();
-	    auth2.signOut().then(function () {
-	    	var a = document.getElementById('status');
-	    	a.innerHTML = "Signed Out";
-	    });
-	  }
+	function signOut() {
+		var auth2 = gapi.auth2.getAuthInstance();
+		auth2.signOut().then(function() {
+			var a = document.getElementById('status');
+			a.innerHTML = "Signed Out";
+		});
+	}
 </script>
 </head>
 <body>
